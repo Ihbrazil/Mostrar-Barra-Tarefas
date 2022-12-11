@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/05/24 19:12:54.000.206,=D:\Embarcadero Delphi\Unit1.pas</Transaction>
+    <Transaction>2022/05/25 10:53:13.000.544,=D:\Embarcadero Delphi\Unit1.pas</Transaction>
+    <Transaction>2022/05/25 12:01:14.000.951,D:\Embarcadero Delphi\Unit1.pas=D:\Embarcadero Delphi\Esconder Área de Trabalho\areadetrabalho.pas</Transaction>
+    <Transaction>2022/05/25 12:01:14.000.951,D:\Embarcadero Delphi\Unit1.dfm=D:\Embarcadero Delphi\Esconder Área de Trabalho\areadetrabalho.dfm</Transaction>
+    <Transaction>2022/05/25 12:02:38.000.458,D:\Embarcadero Delphi\Project1.dproj=D:\Embarcadero Delphi\Esconder Área de Trabalho\PRJesconde_area_trabalho.dproj</Transaction>
+    <Transaction>2022/06/07 19:13:07.000.179,C:\Users\Windows 10 Education\Dropbox\Embarcadero Delphi\Mostrar Barra Tarefas\PRJmostrarbarratarefas.dproj=C:\Users\Windows 10 Education\Dropbox\Embarcadero Delphi\Mostrar Barra Tarefas\PRJesconde_area_trabalho.dproj</Transaction>
+    <Transaction>2022/06/07 19:13:47.000.035,C:\Users\Windows 10 Education\Dropbox\Embarcadero Delphi\Mostrar Barra Tarefas\UNTmostrarbarratarefas.pas=C:\Users\Windows 10 Education\Dropbox\Embarcadero Delphi\Mostrar Barra Tarefas\areadetrabalho.pas</Transaction>
+    <Transaction>2022/06/07 19:13:47.000.035,C:\Users\Windows 10 Education\Dropbox\Embarcadero Delphi\Mostrar Barra Tarefas\UNTmostrarbarratarefas.dfm=C:\Users\Windows 10 Education\Dropbox\Embarcadero Delphi\Mostrar Barra Tarefas\areadetrabalho.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

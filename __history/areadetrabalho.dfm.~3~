@@ -1,0 +1,116 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 201
+  ClientWidth = 564
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 40
+    Top = 32
+    Width = 67
+    Height = 13
+    Caption = 'ctrl+ALT=DEL'
+  end
+  object Label2: TLabel
+    Left = 184
+    Top = 32
+    Width = 110
+    Height = 13
+    Caption = 'mostrar_barra_tarefas'
+  end
+  object Label3: TLabel
+    Left = 313
+    Top = 32
+    Width = 66
+    Height = 13
+    Caption = 'MostrarIniciar'
+  end
+  object Label4: TLabel
+    Left = 432
+    Top = 32
+    Width = 96
+    Height = 13
+    Caption = #225'REA DE tRABALHO'
+  end
+  object Travar: TButton
+    Left = 24
+    Top = 64
+    Width = 75
+    Height = 25
+    Caption = 'Travar'
+    TabOrder = 0
+    OnClick = TravarClick
+  end
+  object Ligar: TButton
+    Left = 24
+    Top = 112
+    Width = 75
+    Height = 25
+    Caption = 'Ligar'
+    TabOrder = 1
+    OnClick = LigarClick
+  end
+  object Mostrar: TButton
+    Left = 184
+    Top = 64
+    Width = 75
+    Height = 25
+    Caption = 'Mostrar'
+    TabOrder = 2
+    OnClick = MostrarClick
+  end
+  object Esconder: TButton
+    Left = 184
+    Top = 112
+    Width = 75
+    Height = 25
+    Caption = 'Esconder'
+    TabOrder = 3
+    OnClick = EsconderClick
+  end
+  object Botao_Iniciar: TButton
+    Left = 304
+    Top = 64
+    Width = 75
+    Height = 25
+    Caption = 'Botao_Iniciar'
+    TabOrder = 4
+    OnClick = Botao_IniciarClick
+  end
+  object Ocultar: TButton
+    Left = 304
+    Top = 112
+    Width = 75
+    Height = 25
+    Caption = 'Ocultar'
+    TabOrder = 5
+    OnClick = OcultarClick
+  end
+  object Mostrar_Icones: TButton
+    Left = 432
+    Top = 64
+    Width = 75
+    Height = 25
+    Caption = 'Mostrar_Icones'
+    TabOrder = 6
+    OnClick = Mostrar_IconesClick
+  end
+  object Esconder_Icones: TButton
+    Left = 432
+    Top = 112
+    Width = 75
+    Height = 25
+    Caption = 'Esconder_Icones'
+    TabOrder = 7
+    OnClick = Esconder_IconesClick
+  end
+end

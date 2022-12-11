@@ -1,0 +1,108 @@
+unit areadetrabalho;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, OleAuto, ShlObj;
+
+type
+  TForm1 = class(TForm)
+    Travar: TButton;
+    Mostrar: TButton;
+    Esconder: TButton;
+    Botao_Iniciar: TButton;
+    Ocultar: TButton;
+    Mostrar_Icones: TButton;
+    Esconder_Icones: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    procedure TravarClick(Sender: TObject);
+    procedure LigarClick(Sender: TObject);
+    procedure MostrarClick(Sender: TObject);
+    procedure EsconderClick(Sender: TObject);
+    procedure Botao_IniciarClick(Sender: TObject);
+    procedure OcultarClick(Sender: TObject);
+    procedure Mostrar_IconesClick(Sender: TObject);
+    procedure Esconder_IconesClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure mostrar_barra_tarefas(Visible: Boolean);
+var
+  wndHandle : THandle;
+  wndClass : array[0..50] of Char;
+begin
+  StrPCopy(@wndClass[0],'Shell_TrayWnd');
+  wndHandle := FindWindow(@wndClass[0], nil);
+  If Visible = True then
+    ShowWindow(wndHandle, SW_RESTORE)
+  else ShowWindow(wndHandle, SW_HIDE);
+end;
+
+procedure MostrarIniciar(Visible:Boolean);
+Var taskbarhandle, buttonhandle : HWND;
+begin
+  taskbarhandle := FindWindow('Shell_TrayWnd', nil);
+  buttonhandle := GetWindow(taskbarhandle, GW_CHILD);
+  if Visible then
+    ShowWindow(buttonhandle, SW_RESTORE) {mostra o botão}
+  else ShowWindow(buttonhandle, SW_HIDE); {esconde o botão}
+end;
+
+procedure TForm1.MostrarClick(Sender: TObject);
+begin
+    mostrar_barra_tarefas(True);
+end;
+
+procedure TForm1.Mostrar_IconesClick(Sender: TObject);
+begin
+    ShowWindow(FindWindow(Nil,'Program Manager'),SW_SHOW);
+end;
+
+procedure TForm1.LigarClick(Sender: TObject);
+var OldValue : LongBool;
+begin
+  SystemParametersInfo(97, Word(False), @OldValue, 0);
+end;
+
+procedure TForm1.Botao_IniciarClick(Sender: TObject);
+begin
+   MostrarIniciar(True);
+end;
+
+procedure TForm1.OcultarClick(Sender: TObject);
+begin
+    MostrarIniciar(False);
+end;
+
+procedure TForm1.EsconderClick(Sender: TObject);
+begin
+  mostrar_barra_tarefas(False);
+end;
+
+procedure TForm1.Esconder_IconesClick(Sender: TObject);
+begin
+    ShowWindow(FindWindow(Nil,'Program Manager'),SW_HIDE);
+end;
+
+procedure TForm1.TravarClick(Sender: TObject);
+var
+    Shell: OleVariant;
+begin
+    Shell := CreateOleObject ('Shell.Application');
+    Shell.MinimizeAll;
+end;
+
+end.
